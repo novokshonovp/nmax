@@ -1,8 +1,14 @@
 # Nmax
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/nmax`. To experiment with that code, run `bin/console` for an interactive prompt.
+Nmax gem reads a ASCII text file and looking for sequences of digits. At the end it shows N greatest numbers.
 
-TODO: Delete this and the text above, and describe your gem
+Code example:
+  include Nmax
+  bp =  BigsParser.new($stdin, 1000).parse
+  p bp.greatest
+
+Shell script usage:
+  $ cat sample_data_40GB.txt | nmax 10000
 
 ## Installation
 
@@ -19,10 +25,6 @@ And then execute:
 Or install it yourself as:
 
     $ gem install nmax
-
-## Usage
-
-cat sample_data_40GB.txt | nmax 10000
 
 ## Development
 

@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+require 'fcntl'
+require 'nmax'
+
+raise 'It gets only the one param (n)!' if ARGV.size != 1
+raise 'Put sample data, example "cat sample_data_40GB.txt | nmax 10000"' if STDIN.fcntl(Fcntl::F_GETFL, 0) != 0
+include Nmax
+p BigsParser.new($stdin, Integer(ARGV[0])).parse.greatest.sort

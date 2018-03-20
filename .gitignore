@@ -8,3 +8,6 @@
 /tmp/
 .byebug_history
 demo.rb
+rebuild_gem
+Gemfile.lock
+*.gem
